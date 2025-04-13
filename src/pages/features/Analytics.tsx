@@ -1,7 +1,6 @@
-
 import React from 'react';
 import FeatureLayout from '@/components/FeatureLayout';
-import { CheckCircle2, BarChart, PieChart, LineChart, Users, MousePointer } from 'lucide-react';
+import { CheckCircle2, BarChart, PieChart, LineChart, Users, MousePointer, Share2 } from 'lucide-react';
 
 const Analytics = () => {
   return (

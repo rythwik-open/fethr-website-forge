@@ -1,7 +1,6 @@
-
 import React from 'react';
 import FeatureLayout from '@/components/FeatureLayout';
-import { CheckCircle2, Zap, CloudLightning, Globe, Database, BarChart } from 'lucide-react';
+import { CheckCircle2, Zap, CloudLightning, Globe, Database, BarChart, Users } from 'lucide-react';
 
 const Performance = () => {
   return (
