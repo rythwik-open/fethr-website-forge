@@ -1,28 +1,45 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Sparkles } from 'lucide-react';
+import { Sparkles, Zap, CheckCircle2 } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <div className="relative overflow-hidden bg-white py-16 sm:py-24">
+    <div className="relative overflow-hidden bg-white py-20 sm:py-32">
       {/* Background Elements */}
-      <div className="absolute -top-24 -left-24 w-72 h-72 bg-fethr-light-blue rounded-full opacity-70 blur-3xl"></div>
-      <div className="absolute -bottom-24 -right-24 w-72 h-72 bg-fethr-light-purple rounded-full opacity-70 blur-3xl"></div>
+      <div className="absolute -top-24 -left-24 w-96 h-96 bg-fethr-light-blue rounded-full opacity-70 blur-3xl"></div>
+      <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-fethr-light-purple rounded-full opacity-70 blur-3xl"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:flex lg:items-center lg:justify-between">
           {/* Hero Text */}
           <div className="lg:w-1/2 z-10 animate-slide-up" style={{ animationDelay: '0.1s' }}>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
-              Create stunning websites with <span className="gradient-text">AI power</span>
+              Create professional websites with <span className="gradient-text">AI-powered precision</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Fethr uses AI to build beautiful, location-based websites in minutes. No design skills required.
+              Fethr transforms your business information into a stunning, location-optimized website in minutes. No design skills required.
             </p>
+            
+            <div className="flex flex-col space-y-4 mb-8">
+              <div className="flex items-center">
+                <CheckCircle2 className="text-fethr-blue mr-3" size={22} />
+                <p className="text-lg">Intelligent integration with Google My Business</p>
+              </div>
+              <div className="flex items-center">
+                <CheckCircle2 className="text-fethr-blue mr-3" size={22} />
+                <p className="text-lg">Location-based optimization for local SEO</p>
+              </div>
+              <div className="flex items-center">
+                <CheckCircle2 className="text-fethr-blue mr-3" size={22} />
+                <p className="text-lg">Intuitive drag-and-drop customization</p>
+              </div>
+            </div>
+            
             <div className="flex flex-col sm:flex-row gap-4">
               <Button className="bg-fethr-blue hover:bg-fethr-purple text-white text-lg px-8 py-6">
                 Start for free
+                <Zap className="ml-2" size={18} />
               </Button>
               <Button variant="outline" className="border-fethr-blue text-fethr-blue hover:bg-fethr-light-blue text-lg px-8 py-6">
                 See examples
@@ -49,13 +66,24 @@ const Hero = () => {
               <div className="absolute -bottom-8 -left-8 bg-white p-4 rounded-xl shadow-lg animate-float">
                 <div className="flex items-center">
                   <div className="h-10 w-10 rounded-full bg-fethr-light-coral flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-5 w-5 text-fethr-coral">
+                    <Zap className="h-5 w-5 text-fethr-coral" />
+                  </div>
+                  <div className="ml-3">
+                    <p className="text-sm font-medium text-gray-900">AI-powered</p>
+                    <p className="text-xs text-gray-500">Intelligent design</p>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute -top-8 -right-8 bg-white p-4 rounded-xl shadow-lg animate-float" style={{ animationDelay: "2s" }}>
+                <div className="flex items-center">
+                  <div className="h-10 w-10 rounded-full bg-fethr-light-blue flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-5 w-5 text-fethr-blue">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                   </div>
                   <div className="ml-3">
-                    <p className="text-sm font-medium text-gray-900">AI-powered</p>
-                    <p className="text-xs text-gray-500">Automatic design</p>
+                    <p className="text-sm font-medium text-gray-900">Mobile-Ready</p>
+                    <p className="text-xs text-gray-500">Responsive design</p>
                   </div>
                 </div>
               </div>
