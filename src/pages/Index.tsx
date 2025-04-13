@@ -6,8 +6,12 @@ import Partners from '@/components/Partners';
 import Stats from '@/components/Stats';
 import Features from '@/components/Features';
 import HowItWorks from '@/components/HowItWorks';
+import CaseStudies from '@/components/CaseStudies';
+import Services from '@/components/Services';
+import Comparison from '@/components/Comparison';
+import Team from '@/components/Team';
+import BlogPreview from '@/components/BlogPreview';
 import Testimonials from '@/components/Testimonials';
-import FAQ from '@/components/FAQ';
 import Pricing from '@/components/Pricing';
 import CallToAction from '@/components/CallToAction';
 import Footer from '@/components/Footer';
@@ -21,8 +25,12 @@ const Index = () => {
       <Stats />
       <Features />
       <HowItWorks />
+      <CaseStudies />
+      <Services />
+      <Comparison />
+      <Team />
+      <BlogPreview />
       <Testimonials />
-      <FAQ />
       <Pricing />
       <CallToAction />
       <Footer />
