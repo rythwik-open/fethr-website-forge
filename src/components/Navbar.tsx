@@ -1,8 +1,8 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -14,6 +14,12 @@ import {
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+
+  // Scroll to top when route changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -119,6 +125,7 @@ const Navbar = () => {
                       key={item.title}
                       to={item.href}
                       className="block text-gray-600 hover:text-fethr-blue"
+                      onClick={() => setIsMenuOpen(false)}
                     >
                       {item.title}
                     </Link>

@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Check, Sparkles, MoveRight, Palette, Layers, BarChart3, Rocket, Globe } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ServiceCard = ({ 
   icon, 
@@ -9,14 +10,16 @@ const ServiceCard = ({
   description, 
   features,
   primaryColor,
-  secondaryColor 
+  secondaryColor,
+  linkTo
 }: { 
   icon: React.ReactNode, 
   title: string, 
   description: string,
   features: string[],
   primaryColor: string,
-  secondaryColor: string 
+  secondaryColor: string,
+  linkTo: string
 }) => {
   return (
     <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 animate-slide-up opacity-0" style={{animationDelay: '0.2s'}}>
@@ -36,10 +39,12 @@ const ServiceCard = ({
             </li>
           ))}
         </ul>
-        <Button variant="outline" className="w-full border-fethr-blue text-fethr-blue hover:bg-fethr-light-blue">
-          Learn more
-          <MoveRight className="ml-2 h-4 w-4" />
-        </Button>
+        <Link to={linkTo}>
+          <Button variant="outline" className="w-full border-fethr-blue text-fethr-blue hover:bg-fethr-light-blue">
+            Learn more
+            <MoveRight className="ml-2 h-4 w-4" />
+          </Button>
+        </Link>
       </div>
     </div>
   );
@@ -53,6 +58,7 @@ const Services = () => {
       description: "Intelligent design based on your business type and preferences",
       primaryColor: "bg-fethr-blue",
       secondaryColor: "bg-blue-600",
+      linkTo: "/features/location-based-creation",
       features: [
         "Industry-specific templates",
         "Location-based content",
@@ -66,6 +72,7 @@ const Services = () => {
       description: "Get found by customers searching in your area",
       primaryColor: "bg-fethr-purple",
       secondaryColor: "bg-indigo-600",
+      linkTo: "/features/seo-tools",
       features: [
         "Local keyword optimization",
         "Google My Business integration",
@@ -79,6 +86,7 @@ const Services = () => {
       description: "Track performance and understand your audience",
       primaryColor: "bg-fethr-coral",
       secondaryColor: "bg-red-500",
+      linkTo: "/features/analytics",
       features: [
         "Visitor tracking dashboard",
         "Conversion analytics",
@@ -110,6 +118,7 @@ const Services = () => {
               features={service.features}
               primaryColor={service.primaryColor}
               secondaryColor={service.secondaryColor}
+              linkTo={service.linkTo}
             />
           ))}
         </div>
