@@ -18,21 +18,71 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       <Navbar />
+      
+      {/* Hero Section with Side-by-side Layout */}
       <Hero />
-      <Partners />
-      <Stats />
-      <Features />
-      <HowItWorks />
-      <CaseStudies />
-      <Services />
-      <Comparison />
-      <Team />
-      <BlogPreview />
-      <Testimonials />
-      <Pricing />
+      
+      {/* Partners Bar */}
+      <div className="bg-white">
+        <Partners />
+      </div>
+      
+      {/* Core Benefits */}
+      <div className="py-16">
+        <Stats />
+      </div>
+      
+      {/* Feature Showcase */}
+      <div className="bg-white py-16">
+        <Features />
+      </div>
+      
+      {/* How It Works */}
+      <div className="bg-fethr-light-blue bg-opacity-20 py-16">
+        <HowItWorks />
+      </div>
+      
+      {/* Case Studies */}
+      <div className="bg-white py-16">
+        <CaseStudies />
+      </div>
+      
+      {/* Services Grid */}
+      <div className="py-16">
+        <Services />
+      </div>
+      
+      {/* Comparison Charts */}
+      <div className="bg-white py-16">
+        <Comparison />
+      </div>
+      
+      {/* Team Section */}
+      <div className="bg-fethr-light-purple bg-opacity-20 py-16">
+        <Team />
+      </div>
+      
+      {/* Blog Previews */}
+      <div className="bg-white py-16">
+        <BlogPreview />
+      </div>
+      
+      {/* Testimonials Carousel */}
+      <div className="py-16">
+        <Testimonials />
+      </div>
+      
+      {/* Pricing Tables */}
+      <div className="bg-white py-16">
+        <Pricing />
+      </div>
+      
+      {/* Call to Action */}
       <CallToAction />
+      
+      {/* Footer */}
       <Footer />
     </div>
   );
